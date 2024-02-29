@@ -10,7 +10,7 @@ class Sensor extends Model
 {
     
     protected $fillable = [
-        'id', 'type', 'value', 'date', 'username'
+        'id', 'name', 'type', 'value', 'date', 'user_id'
     ];
     protected $hidden = [
        

@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
+            $table->string("name")->unique(); //nombre del sensor
             $table->string("type");
             $table->decimal("value", 10, 2);
             $table->datetime("date");
-            $table->string("user");
+            $table->integer("user_id"); //usuario que realiza la lectura 
             $table->timestamps();
         });
     }
